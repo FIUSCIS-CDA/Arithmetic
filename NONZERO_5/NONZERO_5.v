@@ -15,15 +15,15 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 11:46:44 2025"
+// CREATED		"Fri Aug 22 12:27:44 2025"
 
 module NONZERO_5(
-	Register,
+	A,
 	Y
 );
 
 
-input wire	[4:0] Register;
+input wire	[4:0] A;
 output wire	Y;
 
 wire	Ground;
@@ -31,7 +31,7 @@ wire	Ground;
 
 
 
-assign	Y = Register[4] | Register[2] | Register[3] | Register[1] | Register[0] | Ground;
+assign	Y = A[4] | A[2] | A[3] | A[1] | A[0] | Ground;
 
 
 assign	Ground = 0;
