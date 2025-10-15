@@ -15,17 +15,17 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Tue Aug 19 11:47:46 2025"
+// CREATED		"Fri Aug 22 12:31:37 2025"
 
 module EQ_NONZERO_5(
-	reg1,
-	reg2,
+	A,
+	B,
 	Y
 );
 
 
-input wire	[4:0] reg1;
-input wire	[4:0] reg2;
+input wire	[4:0] A;
+input wire	[4:0] B;
 output wire	Y;
 
 wire	registersAreNotZero;
@@ -38,13 +38,13 @@ assign	Y = registersAreTheSame & registersAreNotZero;
 
 
 NONZERO_5	b2v_myNZ(
-	.Register(reg1),
+	.A(A),
 	.Y(registersAreNotZero));
 
 
 EQ_5	b2v_reg1EQreg2(
-	.A(reg1),
-	.B(reg2),
+	.A(A),
+	.B(B),
 	.Y(registersAreTheSame));
 
 

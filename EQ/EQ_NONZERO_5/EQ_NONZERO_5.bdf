@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 216 160 384 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (color 255 0 0)(font_size 6)))
-	(text "reg1[4..0]" (rect 5 0 52 12)(font "Arial" (color 255 0 0)))
+	(text "A[4..0]" (rect 5 0 39 12)(font "Arial" (color 255 0 0)))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12)(color 255 0 0))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 216 216 384 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (color 0 170 0)(font_size 6)))
-	(text "reg2[4..0]" (rect 5 0 49 17)(font "Intel Clear" (color 0 170 0)))
+	(text "B[4..0]" (rect 5 0 36 17)(font "Intel Clear" (color 0 170 0)))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12)(color 0 170 0))
@@ -131,25 +131,25 @@ https://fpgasoftware.intel.com/eula.
 	(fill (color 255 170 0))
 )
 (symbol
-	(rect 552 248 696 344)
+	(rect 552 248 648 344)
 	(text "NONZERO_5" (rect 5 0 81 19)(font "Intel Clear" (color 0 0 0)(font_size 8)))
 	(text "myNZ" (rect 8 75 36 92)(font "Intel Clear" (color 0 0 0)))
 	(port
 		(pt 0 32)
 		(input)
-		(text "Register[4..0]" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
-		(text "Register[4..0]" (rect 21 27 100 46)(font "Intel Clear" (color 0 0 0)(font_size 8)))
+		(text "A[4..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "A[4..0]" (rect 21 27 59 46)(font "Intel Clear" (color 0 0 0)(font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 144 32)
+		(pt 96 32)
 		(output)
 		(text "Y" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
-		(text "Y" (rect 115 27 123 46)(font "Intel Clear" (color 0 0 0)(font_size 8)))
-		(line (pt 144 32)(pt 128 32))
+		(text "Y" (rect 67 27 75 46)(font "Intel Clear" (color 0 0 0)(font_size 8)))
+		(line (pt 96 32)(pt 80 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 80)(color 0 0 0))
+		(rectangle (rect 16 16 80 80))
 	)
 	(fill (color 255 170 0))
 )
@@ -165,10 +165,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 736 192)
 	(pt 784 192)
-)
-(connector
-	(pt 696 280)
-	(pt 736 280)
 )
 (connector
 	(text "registersAreNotZero" (rect 720 190 737 284)(font "Intel Clear" )(vertical))
@@ -225,5 +221,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 848 200)
 	(pt 936 200)
 	(color 0 0 255)
+)
+(connector
+	(pt 648 280)
+	(pt 736 280)
 )
 (junction (pt 472 168))
